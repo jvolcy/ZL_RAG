@@ -1,0 +1,12 @@
+Install Ollama
+curl -fsSL https://ollama.com/install.sh | sh
+
+Install cursor
+Download .deb file from here:
+https://cursor.com/en-US/download
+
+Install SQLite browser
+sudo apt-get install sqlitebrowser
+
+Install GitHub Desktop
+flatpak install flathub io.github.shiftey.Desktop

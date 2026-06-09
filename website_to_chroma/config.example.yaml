@@ -1,0 +1,12 @@
+# Example configuration for website_to_chroma
+start_url: "https://example.com"
+max_pages: 100
+chunk_size: 1000
+chunk_overlap: 200
+chroma_path: "./chroma_db"
+collection_name: "website"
+embedding_model: "BAAI/bge-small-en-v1.5"
+batch_size: 32
+rebuild: false
+crawl_delay: 0.5
+request_timeout: 30
