@@ -1,0 +1,10 @@
+# Copy to config.yaml and adjust paths for your indexed website project.
+
+chroma_path: /path/to/my_project/chroma_db
+collection_name: website
+embedding_model: BAAI/bge-small-en-v1.5
+top_k: 5
+max_history_turns: 10
+memory_enabled: true
+ollama_host: http://localhost:11434
+ollama_model: llama3.1:8b
