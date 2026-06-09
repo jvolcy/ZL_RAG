@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import hashlib
 import logging
+import shutil
+from pathlib import Path
 from typing import Sequence
 
 import chromadb
@@ -11,6 +13,15 @@ import chromadb
 from website_to_chroma.chunker import TextChunk
 
 logger = logging.getLogger(__name__)
+
+
+def wipe_chroma_database(chroma_path: str) -> None:
+    """Delete the entire ChromaDB directory and recreate it empty."""
+    path = Path(chroma_path).resolve()
+    if path.exists():
+        shutil.rmtree(path)
+        logger.info("Wiped ChromaDB directory at %s", path)
+    path.mkdir(parents=True, exist_ok=True)
 
 
 def _chunk_id(chunk: TextChunk) -> str:
